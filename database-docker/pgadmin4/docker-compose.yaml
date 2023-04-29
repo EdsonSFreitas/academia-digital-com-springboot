@@ -1,0 +1,19 @@
+version: '3'
+# Demais parametros se necessario - https://www.pgadmin.org/docs/pgadmin4/latest/container_deployment.html#environment-variables
+# Ambiente apenas para testes
+services:
+  local-postgres-compose:
+    image: dpage/pgadmin4
+    restart: always
+    container_name: "pgadmin4"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "user@domain.com"
+      PGADMIN_DEFAULT_PASSWORD: "SuperSecret"
+    ports:
+    - "8282:80"
+    networks:
+        - pgadmin4-compose-network
+
+networks:
+    pgadmin4-compose-network:
+      driver: bridge

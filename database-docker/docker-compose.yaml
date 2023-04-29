@@ -1,0 +1,23 @@
+version: '3'
+# Ambiente apenas para testes, necessario ajustes para maior seguranca
+services:
+ local-postgres-compose:
+   image: postgres
+   restart: always
+   container_name: "postgres"
+   environment:
+    POSTGRES_PASSWORD: "trocarSenha123"
+   ports:
+   - "5432:5432"
+   volumes:
+   - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+   - ./postgrtes-data:/var/lib/postgresql/data
+   networks:
+   - postgres-compose-network
+
+networks:
+ postgres-compose-network:
+   driver: bridge
+   ipam:
+    config:
+    - subnet: 172.16.100.0/24
