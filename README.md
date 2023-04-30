@@ -14,12 +14,13 @@
 <h2> 🚦 Melhorias que implementei nesse projeto/fork </h2>
 
 <ol>
-    <li> Criei um docker-compose.yaml para iniciar um banco postgre </li>
-    <li> Criei um docker-compose para uso do PgAdmin4 e facilitar a gerencia do banco Postres via interface web com PgAdmin4 </li>
-    <li> Para uso do PgAdmin conecte via browser com http://localhost:8282/, se autentique com os dados gravados no arquivo docker-compose, crie uma conexão e no momento de informar o host informe o endereço IP local da sua estação de trabalho, por exemplo, 192.168.0.2 </li>
+    <li> Criei um docker-compose.yaml para iniciar um banco postgres </li>
+    <li> Criei um docker-compose.yaml para uso do PgAdmin4 e facilitar a gerencia do banco Postres via interface web com PgAdmin4 </li>
     <li> Adicionei testes unitários com Junit </li>
     <li> Adicionei tabela tb_exercicios para gravar os exercicios com nome, peso e quantidade de séries </li>
 </ol>
+
+** Para uso do PgAdmin conecte via browser com http://localhost:8282/, se autentique com os dados gravados no arquivo docker-compose, crie uma conexão e no momento de informar o host informe o endereço IP local da sua estação de trabalho, por exemplo, 192.168.0.2
 
 <h2>🛠 Tecnologias Utilizadas</h2>
 
